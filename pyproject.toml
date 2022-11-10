@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "timelapse"
+version = "0.1.0"
+description = ""
+authors = ["ysemenuk <invent@list.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.1"
+schedule = "^1.1.0"
+
+[tool.poetry.scripts]
+hello = "timelapse.scripts.hello:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
