@@ -12,6 +12,7 @@ schedule = "^1.1.0"
 
 [tool.poetry.scripts]
 hello = "timelapse.scripts.hello:main"
+get-image = "timelapse.scripts.get_image:main"
 
 [build-system]
 requires = ["poetry-core"]
