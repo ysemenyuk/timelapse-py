@@ -3,16 +3,19 @@ import time
 import json
 from timelapse.save_photo import save_photo
 from timelapse import utils
+from dotenv import load_dotenv
 
+load_dotenv()
 
 with open('camera_settings.json') as f:
     camera_settings = json.load(f)
 
 
 def make_dir_path(camera_settings):
-    camera_main_dir = camera_settings['main_dir']
+    storage = os.getenv('STORAGE_DIR')
+    camera_dir = camera_settings['main_dir']
     dir_name = time.strftime('%Y-%m-%d')
-    dir_path = os.path.join(utils.STORAGE_DIR, camera_main_dir, utils.PHOTOS_BY_TIME_DIR, dir_name)
+    dir_path = os.path.join(storage, camera_dir, utils.PHOTOS_BY_TIME_DIR, dir_name)
     return dir_path
 
 
