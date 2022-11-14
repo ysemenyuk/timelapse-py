@@ -10,7 +10,10 @@ def make_photo_name():
 def save_photo(photo_url, dir_path):
     print('start save_photo', time.asctime())
    
-    response = requests.get(photo_url)
+    try:
+        response = requests.get(photo_url)
+    except Exception as e:
+        print('requests error', e)
 
     if response.status_code == 200:
         print("response code '% s'" % response.status_code)

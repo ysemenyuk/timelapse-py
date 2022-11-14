@@ -11,7 +11,7 @@ def makeNum(num):
     return f'0{num}'
   return num
 
-STORAGE_DIR = 'C:\\timelapse\\storage'
+
 PHOTOS_DIR = 'photos'
 VIDEOS_DIR = 'videos'
 PHOTOS_BY_TIME_DIR = 'photosByTime'
